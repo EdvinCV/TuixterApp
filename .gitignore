@@ -1,1 +1,26 @@
 backend/node_modules
+
+
+
+# FRONT-END ----------------------------
+# dependencies
+tuixter-app/node_modules
+tuixter-app/.pnp
+tuixter-app/.pnp.js
+
+# testing
+tuixter-app/coverage
+
+# production
+tuixter-app/build
+
+# misc
+tuixter-app/.DS_Store
+tuixter-app/.env.local
+tuixter-app/.env.development.local
+tuixter-app/.env.test.local
+tuixter-app/.env.production.local
+
+tuixter-app/npm-debug.log*
+tuixter-app/yarn-debug.log*
+tuixter-app/yarn-error.log*
