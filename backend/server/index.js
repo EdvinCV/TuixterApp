@@ -5,11 +5,15 @@ const morgan = require('morgan');
 // ENV
 require('dotenv').config();
 // DB Connection
+// Authentication middlewares
+const {authentication} = require('./middlewares/authentication');
+
 const {dbconnection} = require('./config/dbconnection');
 
 // Middlewares and routes
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(authentication);
 app.use('/api/users', require('./components/users/userRouter'));
 
 

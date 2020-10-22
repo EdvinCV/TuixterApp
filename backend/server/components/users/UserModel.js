@@ -38,6 +38,17 @@ const User = sequelize.define('User', {
         defaultValue: false
     }
 }, {
+    getterMethods: {
+        me(){
+            return {
+                name: this.name,
+                username: this.username,
+                email: this.email,
+                status: this.status,
+                isVerified: this.isVerified
+            }
+        }
+    },
     timestamps: true
 });
 

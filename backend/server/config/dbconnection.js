@@ -7,7 +7,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, pr
 
 const dbconnection = async () => {
     try {
-        await sequelize.sync({force: false});
+        await sequelize.afterValidate();
         console.log("DB connection established");
     } catch (error) {
         console.log(error);
